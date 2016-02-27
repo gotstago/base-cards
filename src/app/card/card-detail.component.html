@@ -1,0 +1,23 @@
+<div *ngIf="card">
+  <h3>"{{editName}}"</h3>
+  <div>
+    <label>Id:</label>
+    {{card.id}}
+  </div>
+  <div>
+    <label>Name:</label>
+    <!--<input [(ngModel)]="editName" placeholder="name"/>-->
+    {{card.name}}
+  </div>
+  <div>
+    <label>Rank:</label>
+    {{card.rank}}
+  </div>
+  <div>
+    <label>Suit:</label>
+    {{card.suit}}
+  </div>
+  <!--<button (click)="save()">Save</button>
+  <button (click)="cancel()">Cancel</button>-->
+  <button (click)="finished()">Finished</button>
+</div>

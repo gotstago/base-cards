@@ -1,0 +1,12 @@
+<h2>Card List</h2>
+
+<ul>
+  <li *ngFor="#card of cards| filterCards:filter">
+    <a
+      [routerLink]="['CardDetail', { id: card.id }]">
+      <strong>{{card.id}}</strong>
+      -
+      {{card.name}}
+    </a>
+  </li>
+</ul>
