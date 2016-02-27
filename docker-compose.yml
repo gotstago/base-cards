@@ -1,0 +1,23 @@
+visual_studio:
+    build: .
+    container_name: "visual_studio"
+    net: "host"
+    volumes:
+        - /tmp/.X11-unix:/tmp/.X11-unix
+        - /home/dev:/home/developer
+    environment:
+        DISPLAY: unix:0.0
+    user: root
+
+    volumes_from:
+        - data
+
+
+data:
+  image: data
+  container_name: data
+
+  #mem_limit: 1000000000
+  volumes:
+    - /home/dev/docker/dockerfiles/data:/data
+ 
